@@ -43,6 +43,14 @@
 		E78F2CF02A582155003518A6 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2CEF2A582155003518A6 /* SettingView.swift */; };
 		E78F2CF72A5822F2003518A6 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2CF62A5822F2003518A6 /* Help.swift */; };
 		E78F2CFB2A5830D5003518A6 /* ConstantsForFlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2CFA2A5830D5003518A6 /* ConstantsForFlightButton.swift */; };
+		E78F2CFE2A5A3176003518A6 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2CFD2A5A3176003518A6 /* EmptyStateView.swift */; };
+		E78F2D002A5A31EE003518A6 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2CFF2A5A31EE003518A6 /* JobView.swift */; };
+		E78F2D022A5A3253003518A6 /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D012A5A3253003518A6 /* JobDetailView.swift */; };
+		E78F2D042A5A3286003518A6 /* JobRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D032A5A3286003518A6 /* JobRow.swift */; };
+		E78F2D062A5A32C7003518A6 /* JobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D052A5A32C7003518A6 /* JobResponse.swift */; };
+		E78F2D082A5A32E8003518A6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D072A5A32E8003518A6 /* DataModel.swift */; };
+		E78F2D0B2A5A334F003518A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E78F2D0A2A5A334F003518A6 /* Alamofire */; };
+		E78F2D0D2A5A338B003518A6 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D0C2A5A338B003518A6 /* JobListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +104,13 @@
 		E78F2CEF2A582155003518A6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E78F2CF62A5822F2003518A6 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		E78F2CFA2A5830D5003518A6 /* ConstantsForFlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsForFlightButton.swift; sourceTree = "<group>"; };
+		E78F2CFD2A5A3176003518A6 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		E78F2CFF2A5A31EE003518A6 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
+		E78F2D012A5A3253003518A6 /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
+		E78F2D032A5A3286003518A6 /* JobRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRow.swift; sourceTree = "<group>"; };
+		E78F2D052A5A32C7003518A6 /* JobResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobResponse.swift; sourceTree = "<group>"; };
+		E78F2D072A5A32E8003518A6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E78F2D0C2A5A338B003518A6 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78F2CC42A55A562003518A6 /* FirebaseFirestoreSwift in Frameworks */,
+				E78F2D0B2A5A334F003518A6 /* Alamofire in Frameworks */,
 				E78F2CC02A55A562003518A6 /* FirebaseDatabaseSwift in Frameworks */,
 				E78F2CC22A55A562003518A6 /* FirebaseFirestore in Frameworks */,
 				E78F2CBE2A55A562003518A6 /* FirebaseDatabase in Frameworks */,
@@ -153,6 +169,7 @@
 		E78F2C7F2A559976003518A6 /* TravelJobFinder */ = {
 			isa = PBXGroup;
 			children = (
+				E78F2CFC2A5A3161003518A6 /* Jobsearching */,
 				E78F2CF92A5830A7003518A6 /* Flüge */,
 				E78F2CF82A582973003518A6 /* MemberArea */,
 				E78F2CF32A582234003518A6 /* CustomCorner */,
@@ -267,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				E78F2CDA2A581D78003518A6 /* HotelViewModel.swift */,
+				E78F2D0C2A5A338B003518A6 /* JobListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -275,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				E78F2CDD2A581D9C003518A6 /* Hotel.swift */,
+				E78F2D052A5A32C7003518A6 /* JobResponse.swift */,
+				E78F2D072A5A32E8003518A6 /* DataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,6 +413,17 @@
 			path = "Flüge";
 			sourceTree = "<group>";
 		};
+		E78F2CFC2A5A3161003518A6 /* Jobsearching */ = {
+			isa = PBXGroup;
+			children = (
+				E78F2CFD2A5A3176003518A6 /* EmptyStateView.swift */,
+				E78F2CFF2A5A31EE003518A6 /* JobView.swift */,
+				E78F2D012A5A3253003518A6 /* JobDetailView.swift */,
+				E78F2D032A5A3286003518A6 /* JobRow.swift */,
+			);
+			path = Jobsearching;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,6 +447,7 @@
 				E78F2CC12A55A562003518A6 /* FirebaseFirestore */,
 				E78F2CC32A55A562003518A6 /* FirebaseFirestoreSwift */,
 				E78F2CC52A55A562003518A6 /* FirebaseStorage */,
+				E78F2D0A2A5A334F003518A6 /* Alamofire */,
 			);
 			productName = TravelJobFinder;
 			productReference = E78F2C7D2A559976003518A6 /* TravelJobFinder.app */;
@@ -491,6 +523,7 @@
 			mainGroup = E78F2C742A559976003518A6;
 			packageReferences = (
 				E78F2CBA2A55A562003518A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E78F2D092A5A334F003518A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = E78F2C7E2A559976003518A6 /* Products */;
 			projectDirPath = "";
@@ -535,10 +568,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78F2D002A5A31EE003518A6 /* JobView.swift in Sources */,
 				E78F2CE12A581DDD003518A6 /* PrivacyPolicyView.swift in Sources */,
 				E78F2CD62A5814C2003518A6 /* HotelListView.swift in Sources */,
 				E78F2C832A559976003518A6 /* ContentView.swift in Sources */,
 				E78F2CDE2A581D9C003518A6 /* Hotel.swift in Sources */,
+				E78F2D082A5A32E8003518A6 /* DataModel.swift in Sources */,
 				E78F2CAB2A5599A2003518A6 /* Home.swift in Sources */,
 				E78F2CB62A559AC9003518A6 /* Splash.swift in Sources */,
 				E78F2CB92A55A428003518A6 /* AuthService.swift in Sources */,
@@ -546,14 +581,19 @@
 				E78F2CC92A55A5AD003518A6 /* OnboardingRules.swift in Sources */,
 				E78F2CAF2A5599F3003518A6 /* SideMenu.swift in Sources */,
 				E78F2CB12A559A12003518A6 /* TabButton.swift in Sources */,
+				E78F2D062A5A32C7003518A6 /* JobResponse.swift in Sources */,
 				E78F2CDB2A581D78003518A6 /* HotelViewModel.swift in Sources */,
+				E78F2CFE2A5A3176003518A6 /* EmptyStateView.swift in Sources */,
 				E78F2CB32A559A54003518A6 /* CustomCorner.swift in Sources */,
+				E78F2D022A5A3253003518A6 /* JobDetailView.swift in Sources */,
+				E78F2D0D2A5A338B003518A6 /* JobListViewModel.swift in Sources */,
 				E78F2CD02A55F636003518A6 /* LoginView.swift in Sources */,
 				E78F2CD82A5815CB003518A6 /* HotelDetailView.swift in Sources */,
 				E78F2CEA2A581FD5003518A6 /* CreateProfileView.swift in Sources */,
 				E78F2CD32A55F971003518A6 /* OnboardingView.swift in Sources */,
 				E78F2CAD2A5599CE003518A6 /* Main.swift in Sources */,
 				E78F2C812A559976003518A6 /* TravelJobFinderApp.swift in Sources */,
+				E78F2D042A5A3286003518A6 /* JobRow.swift in Sources */,
 				E78F2CE42A581E21003518A6 /* TermsOfServiceView.swift in Sources */,
 				E78F2CE72A581E6D003518A6 /* ChangePasswordView.swift in Sources */,
 				E78F2CF02A582155003518A6 /* SettingView.swift in Sources */,
@@ -893,6 +933,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		E78F2D092A5A334F003518A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -925,6 +973,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E78F2CBA2A55A562003518A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		E78F2D0A2A5A334F003518A6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E78F2D092A5A334F003518A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

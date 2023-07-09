@@ -31,6 +31,7 @@ struct SideMenu: View {
                 TabButton(image: "globe.europe.africa.fill", title: "Meine Reise", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "gear", title: "Setting", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "bell", title: "Notification", animation: animation, selectedTab: $selectedTab)
+                TabButton(image: "figure.wave.circle.fill", title: "Jobsearching", animation: animation, selectedTab: $selectedTab)
                 
             }
             .padding(.leading,-15)

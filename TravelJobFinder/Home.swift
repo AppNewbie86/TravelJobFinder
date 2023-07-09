@@ -2,6 +2,7 @@ import SwiftUI
 import FirebaseCoreInternal
 struct Home: View {
     @Binding var selectedTab: String
+    @State private var showJobRow = false
 
     init(selectedTab: Binding<String>) {
         self._selectedTab = selectedTab
@@ -25,6 +26,8 @@ struct Home: View {
                 .tag("Notification")
             Help()
                 .tag("Help")
+            JobRow(viewModel: JobListViewModel())
+                .tag("Jobsearching")
         }
     }
 }
