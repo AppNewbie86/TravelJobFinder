@@ -3,11 +3,9 @@ import SwiftUI
 import Foundation
 
 
-
 struct JobRow: View {
     
     @State private var showAlert = false
-    
     
     @ObservedObject var viewModel: JobListViewModel
     @State private var offsetY: CGFloat = 0.0
@@ -16,7 +14,7 @@ struct JobRow: View {
     
     var body: some View {
        
-            NavigationStack {
+            NavigationView {
                 
                 ZStack {
                     // Hintergrundbildansicht
@@ -67,35 +65,39 @@ struct JobRow: View {
                         }
                     }
                     Spacer(minLength: 10)
-                    SearchBar(searchTerm: $viewModel.searchTerm)
+                    SearchBar1(searchTerm: $viewModel.searchTerm)
                     
                     if viewModel.jobs.isEmpty {
                         EmptyStateView()
                     } else {
-                        List(viewModel.jobs) { job in
-                            NavigationLink(destination: JobDetailView(job: job)) {
-                                JobView(job: job)
-                            }
-                        }.navigationTitle("Jobfinder")
-                            .listStyle(.plain)
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.orange, lineWidth: 1)).opacity(0.8)
-                            .offset(y: offsetY)
-                            .gesture(DragGesture().onChanged({ value in
-                                self.offsetY = value.translation.height
-                            }).onEnded({ value in
-                                withAnimation(.spring()) {
-                                    if offsetY > 50 {
-                                        offsetY = UIScreen.main.bounds.height
-                                    } else if offsetY < -50 {
-                                        offsetY = -UIScreen.main.bounds.height
-                                    } else {
-                                        offsetY = 0
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(viewModel.jobs) { job in
+                                    NavigationLink(destination: JobDetailView(job: job)) {
+                                        JobView(job: job)
                                     }
                                 }
-                            }))
+                            }
+                        }
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.orange, lineWidth: 1))
+                        .opacity(0.8)
+                        .offset(y: offsetY)
+                        .gesture(DragGesture().onChanged({ value in
+                            self.offsetY = value.translation.height
+                        }).onEnded({ value in
+                            withAnimation(.spring()) {
+                                if offsetY > 50 {
+                                    offsetY = UIScreen.main.bounds.height
+                                } else if offsetY < -50 {
+                                    offsetY = -UIScreen.main.bounds.height
+                                } else {
+                                    offsetY = 0
+                                }
+                            }
+                        }))
                     }
                 }
             }
@@ -105,11 +107,9 @@ struct JobRow: View {
     }
 }
 
-
-
 import SwiftUI
 
-struct SearchBar: UIViewRepresentable {
+struct SearchBar1: UIViewRepresentable {
   typealias UIViewType = UISearchBar
   @Binding var searchTerm: String
 
@@ -131,18 +131,29 @@ struct SearchBar: UIViewRepresentable {
     return SearchBarCoordinator(searchTerm: $searchTerm)
   }
   
-  class SearchBarCoordinator: NSObject, UISearchBarDelegate {
-    @Binding var searchTerm: String
-    
-    init(searchTerm: Binding<String>) {
-      self._searchTerm = searchTerm
+    class SearchBarCoordinator: NSObject, UISearchBarDelegate {
+        @Binding var searchTerm: String
+        
+        init(searchTerm: Binding<String>) {
+            self._searchTerm = searchTerm
+        }
+        
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchTerm = searchBar.text ?? ""
+            UIApplication.shared.windows.first { $0.isKeyWindow }?.endEditing(true)
+        }
+        
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            searchTerm = searchText
+        }
     }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-      searchTerm = searchBar.text ?? ""
-      UIApplication.shared.windows.first { $0.isKeyWindow }?.endEditing(true)
-    }
-  }
+  
+
+
+
+
+
+
 }
 
 

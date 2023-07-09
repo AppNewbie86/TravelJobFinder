@@ -22,12 +22,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct TravelJobFinderApp: App {
     @EnvironmentObject var authService : AuthService
+    @StateObject private var tripTide = TripTypeViewModel()
+
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(AuthService())
+                .environmentObject(tripTide)
 
         }
     }

@@ -27,7 +27,7 @@ struct SideMenu: View {
                 TabButton(image: "house", title: "Home", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "questionmark.circle", title: "Flüge", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "questionmark.circle", title: "Hotels", animation: animation, selectedTab: $selectedTab)
-                TabButton(image: "mountain.2", title: "Veranstaltungen", animation: animation, selectedTab: $selectedTab)
+                TabButton(image: "mountain.2", title: "Events", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "globe.europe.africa.fill", title: "Meine Reise", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "gear", title: "Setting", animation: animation, selectedTab: $selectedTab)
                 TabButton(image: "bell", title: "Notification", animation: animation, selectedTab: $selectedTab)

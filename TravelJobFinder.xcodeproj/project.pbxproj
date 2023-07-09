@@ -51,6 +51,17 @@
 		E78F2D082A5A32E8003518A6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D072A5A32E8003518A6 /* DataModel.swift */; };
 		E78F2D0B2A5A334F003518A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E78F2D0A2A5A334F003518A6 /* Alamofire */; };
 		E78F2D0D2A5A338B003518A6 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D0C2A5A338B003518A6 /* JobListViewModel.swift */; };
+		E78F2D102A5A4D49003518A6 /* SearchBar3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D0F2A5A4D49003518A6 /* SearchBar3.swift */; };
+		E78F2D122A5A4D8C003518A6 /* PayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D112A5A4D8C003518A6 /* PayButtonView.swift */; };
+		E78F2D142A5A4DB0003518A6 /* BookingCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D132A5A4DB0003518A6 /* BookingCardButton.swift */; };
+		E78F2D162A5A4DD1003518A6 /* ActivityTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D152A5A4DD1003518A6 /* ActivityTripView.swift */; };
+		E78F2D182A5A4DF8003518A6 /* DetailActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D172A5A4DF8003518A6 /* DetailActivityView.swift */; };
+		E78F2D1A2A5A4E19003518A6 /* ActivityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D192A5A4E19003518A6 /* ActivityButton.swift */; };
+		E78F2D1C2A5A4E3D003518A6 /* DetailActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D1B2A5A4E3D003518A6 /* DetailActivityRow.swift */; };
+		E78F2D1E2A5A4E85003518A6 /* TripTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D1D2A5A4E85003518A6 /* TripTypeViewModel.swift */; };
+		E78F2D202A5A4EB7003518A6 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D1F2A5A4EB7003518A6 /* Activities.swift */; };
+		E78F2D222A5A4F56003518A6 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D212A5A4F56003518A6 /* CircleGroupView.swift */; };
+		E78F2D242A5A4FE3003518A6 /* ConstantsForTripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2D232A5A4FE3003518A6 /* ConstantsForTripButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +122,17 @@
 		E78F2D052A5A32C7003518A6 /* JobResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobResponse.swift; sourceTree = "<group>"; };
 		E78F2D072A5A32E8003518A6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E78F2D0C2A5A338B003518A6 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
+		E78F2D0F2A5A4D49003518A6 /* SearchBar3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar3.swift; sourceTree = "<group>"; };
+		E78F2D112A5A4D8C003518A6 /* PayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayButtonView.swift; sourceTree = "<group>"; };
+		E78F2D132A5A4DB0003518A6 /* BookingCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCardButton.swift; sourceTree = "<group>"; };
+		E78F2D152A5A4DD1003518A6 /* ActivityTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTripView.swift; sourceTree = "<group>"; };
+		E78F2D172A5A4DF8003518A6 /* DetailActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActivityView.swift; sourceTree = "<group>"; };
+		E78F2D192A5A4E19003518A6 /* ActivityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityButton.swift; sourceTree = "<group>"; };
+		E78F2D1B2A5A4E3D003518A6 /* DetailActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActivityRow.swift; sourceTree = "<group>"; };
+		E78F2D1D2A5A4E85003518A6 /* TripTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTypeViewModel.swift; sourceTree = "<group>"; };
+		E78F2D1F2A5A4EB7003518A6 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		E78F2D212A5A4F56003518A6 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		E78F2D232A5A4FE3003518A6 /* ConstantsForTripButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsForTripButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +191,7 @@
 		E78F2C7F2A559976003518A6 /* TravelJobFinder */ = {
 			isa = PBXGroup;
 			children = (
+				E78F2D0E2A5A4D15003518A6 /* Events */,
 				E78F2CFC2A5A3161003518A6 /* Jobsearching */,
 				E78F2CF92A5830A7003518A6 /* Flüge */,
 				E78F2CF82A582973003518A6 /* MemberArea */,
@@ -285,6 +308,7 @@
 			children = (
 				E78F2CDA2A581D78003518A6 /* HotelViewModel.swift */,
 				E78F2D0C2A5A338B003518A6 /* JobListViewModel.swift */,
+				E78F2D1D2A5A4E85003518A6 /* TripTypeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -295,6 +319,7 @@
 				E78F2CDD2A581D9C003518A6 /* Hotel.swift */,
 				E78F2D052A5A32C7003518A6 /* JobResponse.swift */,
 				E78F2D072A5A32E8003518A6 /* DataModel.swift */,
+				E78F2D1F2A5A4EB7003518A6 /* Activities.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -422,6 +447,22 @@
 				E78F2D032A5A3286003518A6 /* JobRow.swift */,
 			);
 			path = Jobsearching;
+			sourceTree = "<group>";
+		};
+		E78F2D0E2A5A4D15003518A6 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				E78F2D0F2A5A4D49003518A6 /* SearchBar3.swift */,
+				E78F2D112A5A4D8C003518A6 /* PayButtonView.swift */,
+				E78F2D132A5A4DB0003518A6 /* BookingCardButton.swift */,
+				E78F2D152A5A4DD1003518A6 /* ActivityTripView.swift */,
+				E78F2D172A5A4DF8003518A6 /* DetailActivityView.swift */,
+				E78F2D192A5A4E19003518A6 /* ActivityButton.swift */,
+				E78F2D1B2A5A4E3D003518A6 /* DetailActivityRow.swift */,
+				E78F2D212A5A4F56003518A6 /* CircleGroupView.swift */,
+				E78F2D232A5A4FE3003518A6 /* ConstantsForTripButton.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,24 +617,35 @@
 				E78F2D082A5A32E8003518A6 /* DataModel.swift in Sources */,
 				E78F2CAB2A5599A2003518A6 /* Home.swift in Sources */,
 				E78F2CB62A559AC9003518A6 /* Splash.swift in Sources */,
+				E78F2D202A5A4EB7003518A6 /* Activities.swift in Sources */,
+				E78F2D102A5A4D49003518A6 /* SearchBar3.swift in Sources */,
 				E78F2CB92A55A428003518A6 /* AuthService.swift in Sources */,
+				E78F2D182A5A4DF8003518A6 /* DetailActivityView.swift in Sources */,
+				E78F2D1A2A5A4E19003518A6 /* ActivityButton.swift in Sources */,
 				E78F2CED2A582048003518A6 /* NewsPage.swift in Sources */,
 				E78F2CC92A55A5AD003518A6 /* OnboardingRules.swift in Sources */,
 				E78F2CAF2A5599F3003518A6 /* SideMenu.swift in Sources */,
+				E78F2D142A5A4DB0003518A6 /* BookingCardButton.swift in Sources */,
 				E78F2CB12A559A12003518A6 /* TabButton.swift in Sources */,
 				E78F2D062A5A32C7003518A6 /* JobResponse.swift in Sources */,
 				E78F2CDB2A581D78003518A6 /* HotelViewModel.swift in Sources */,
 				E78F2CFE2A5A3176003518A6 /* EmptyStateView.swift in Sources */,
 				E78F2CB32A559A54003518A6 /* CustomCorner.swift in Sources */,
 				E78F2D022A5A3253003518A6 /* JobDetailView.swift in Sources */,
+				E78F2D1E2A5A4E85003518A6 /* TripTypeViewModel.swift in Sources */,
 				E78F2D0D2A5A338B003518A6 /* JobListViewModel.swift in Sources */,
 				E78F2CD02A55F636003518A6 /* LoginView.swift in Sources */,
+				E78F2D242A5A4FE3003518A6 /* ConstantsForTripButton.swift in Sources */,
 				E78F2CD82A5815CB003518A6 /* HotelDetailView.swift in Sources */,
+				E78F2D162A5A4DD1003518A6 /* ActivityTripView.swift in Sources */,
 				E78F2CEA2A581FD5003518A6 /* CreateProfileView.swift in Sources */,
 				E78F2CD32A55F971003518A6 /* OnboardingView.swift in Sources */,
+				E78F2D1C2A5A4E3D003518A6 /* DetailActivityRow.swift in Sources */,
 				E78F2CAD2A5599CE003518A6 /* Main.swift in Sources */,
 				E78F2C812A559976003518A6 /* TravelJobFinderApp.swift in Sources */,
 				E78F2D042A5A3286003518A6 /* JobRow.swift in Sources */,
+				E78F2D222A5A4F56003518A6 /* CircleGroupView.swift in Sources */,
+				E78F2D122A5A4D8C003518A6 /* PayButtonView.swift in Sources */,
 				E78F2CE42A581E21003518A6 /* TermsOfServiceView.swift in Sources */,
 				E78F2CE72A581E6D003518A6 /* ChangePasswordView.swift in Sources */,
 				E78F2CF02A582155003518A6 /* SettingView.swift in Sources */,

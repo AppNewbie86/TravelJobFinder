@@ -66,7 +66,6 @@ struct JobDetailView: View {
             .cornerRadius(20)
             .padding()
             .navigationTitle(job.title)
-            .navigationBarTitleDisplayMode(.inline)
         }
         .foregroundColor(.white)
     }

@@ -20,6 +20,8 @@ struct Home: View {
             .tag("Flüge")
             HotelListView()
                 .tag("Hotels")
+            ActivityTripView()
+                .tag("Events")
             SettingView()
                 .tag("Setting")
             NotificationView()
@@ -37,7 +39,6 @@ struct Home_Previews: PreviewProvider {
         MainView()
     }
 }
-
 struct NotificationView: View {
     @Environment(\.presentationMode) var presentationMode
 
@@ -67,34 +68,10 @@ struct NotificationView: View {
                 .padding(.top)
 
                 Spacer()
-
-                Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Close")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundColor(
-                                    Color(
-                                        red: 75 / 255,
-                                        green: 115 / 255,
-                                        blue: 115 / 255
-                                    )
-                                )
-                        )
-                        .cornerRadius(8)
-                        .cornerRadius(10)
-                }
-                .padding()
-
             }
             .navigationTitle("Notification")
             .navigationBarItems(trailing: closeButton)
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Display as modal sheet
     }
 
     private var closeButton: some View {
@@ -106,6 +83,7 @@ struct NotificationView: View {
                 .foregroundColor(.black)
         }
     }
+}
 
     // Dummy news items for demonstration
     private let newsItems = [
@@ -113,7 +91,7 @@ struct NotificationView: View {
         NewsItem(title: "Neuigkeit 2"),
         NewsItem(title: "Neuigkeit 3")
     ]
-}
+
 
 struct NewsItem: Identifiable, Hashable {
     let id = UUID()
