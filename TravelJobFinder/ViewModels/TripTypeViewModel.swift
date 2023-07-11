@@ -3,7 +3,7 @@ import MapKit
 
 
 //MARK: MODEL VIEW
-
+@MainActor
 class TripTypeViewModel : ObservableObject {
     
     
@@ -12,12 +12,16 @@ class TripTypeViewModel : ObservableObject {
     @Published var places : [Places] = []
     @Published var total : Int = 0
     @Published var searchText : String = ""
+    
+    // Function zum Wählen des Events
    
     func addActivities(newItem: Activities) {
        
         activities.append(newItem)
         total += newItem.price
     }
+    
+    // Function zum Entfernen von der Warenkorb Karte
     
     func removeFromCart (newItem: Activities){
         

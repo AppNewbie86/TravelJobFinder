@@ -35,7 +35,7 @@ struct ActivityTripView: View {
                     .offset(x: -0)
                     .opacity(01.05)
                 // Ein Farbverlauf wird als Hintergrund festgelegt
-                LinearGradient(colors: [.black.opacity(0.47),.black.opacity(0.47)], startPoint: .topLeading, endPoint: .bottomLeading)
+                LinearGradient(colors: [.white.opacity(0.77),.white.opacity(0.77)], startPoint: .topLeading, endPoint: .bottomLeading)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .leading) {

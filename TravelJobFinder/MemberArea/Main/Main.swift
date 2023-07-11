@@ -3,10 +3,13 @@ import SwiftUI
 struct MainView: View {
     @State var selectedTab = "Home"
     @State var show = false
-    
+    // Zustandsvariable zur Verwaltung der TripTypViewModel
+//    @EnvironmentObject var tripType: TripTypeViewModel
+//    @EnvironmentObject var hotelType: HotelViewModel
+//    @EnvironmentObject var flightType: FlightTypeViewModel
     var body: some View {
             ZStack{
-                Color("LightYellow")
+                Color.white
                     .edgesIgnoringSafeArea(.all)
                 
                 SideMenu(selectedTab: $selectedTab)

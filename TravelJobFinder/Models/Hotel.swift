@@ -2,12 +2,13 @@
 import Foundation
 
 
-struct Hotel: Identifiable {
+struct Hotel: Identifiable , Hashable{
     let id = UUID()
     let name: String
     let location: String
     let price: String
     let description: String
-    let imageName: String // Bildname oder URL für das Hotelbild
+    let image: String // Bildname oder URL für das Hotelbild
     let wifi: Bool
 }
+

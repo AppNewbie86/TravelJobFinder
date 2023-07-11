@@ -11,7 +11,7 @@ struct ContentView: View {
             
             ZStack {
                 // Ein Farbverlauf wird als Hintergrund festgelegt
-                LinearGradient(colors: [.black,.black,.black], startPoint: .topLeading, endPoint: .bottomLeading)
+                LinearGradient(colors: [.white,.white,.white], startPoint: .topLeading, endPoint: .bottomLeading)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {

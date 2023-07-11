@@ -2,7 +2,7 @@
 import Combine
 import Foundation
 import SwiftUI
-
+@MainActor
 class JobListViewModel: ObservableObject {
     
     @Published var searchTerm: String = " "

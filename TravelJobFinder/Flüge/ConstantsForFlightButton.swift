@@ -1,9 +1,7 @@
-
+// Eine Struktur für Konstanten, die in FlightButton verwendet werden
 
 import Foundation
 import UIKit
-
-
 
 enum ConstantsForFlightButton {
     

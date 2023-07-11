@@ -33,7 +33,7 @@ struct ChangePasswordView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .frame(height: 44)
-                        .background(Color.blue)
+                        .background(Color.green)
                         .cornerRadius(8)
                 }
             }

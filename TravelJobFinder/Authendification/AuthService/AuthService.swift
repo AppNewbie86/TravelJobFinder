@@ -1,8 +1,7 @@
 
 import Foundation
 import FirebaseAuth
-import Foundation
-import FirebaseAuth
+
 
 // Die Klasse AuthService ist eine ObservableObject-Klasse, die verschiedene Methoden zur Verwaltung der Authentifizierungsfunktionen enthält
 final class AuthService: ObservableObject {

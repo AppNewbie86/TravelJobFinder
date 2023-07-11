@@ -1,89 +1,63 @@
+
 import SwiftUI
 
 struct HotelDetailView: View {
     let hotel: Hotel
     @ObservedObject var viewModel: HotelViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        ZStack{
-            Color.black
-                .edgesIgnoringSafeArea(.all)
+        VStack {
+            Image(hotel.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(8)
+                .padding()
             
-            ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    Image(hotel.imageName)
-                        .resizable()
-                        .cornerRadius(8)
-                        .frame(height: 350)
-
-                    Text(hotel.name)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    
-                    Text("Preis: \(hotel.price)")
-                        .font(.headline)
-                        .foregroundColor(.white)
-
-                    
-                    Text(hotel.description)
-                        .font(.body)
-                        .foregroundColor(.white)
-
-                    
-                    // Weitere Hotelinformationen hier hinzufügen...
-                    HotelFeatureRow(icon: "wifi", title: "WLAN", isActive: hotel.wifi)
-                    
-                    Button(action: {
-                        viewModel.bookHotel(hotel)
-                    }) {
-                        Text("Hotel buchen")
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 44)
-                            .background(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .foregroundColor(
-                                        Color(
-                                            red: 75 / 255,
-                                            green: 115 / 255,
-                                            blue: 115 / 255
-                                        )
-                                    )
-                            )
-                            .cornerRadius(8)
-                    }
-                    
-                    // Weitere Ansichtselemente und Funktionen hier hinzufügen...
-                    
-                    Spacer()
-                }
+            Text(hotel.name)
+                .font(.title)
+                .padding(.bottom, 8)
+            
+            Text(hotel.location)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                .padding(.bottom, 16)
+            
+            Text(hotel.description)
+                .font(.body)
+                .multilineTextAlignment(.center)
                 .padding(.horizontal, 16)
+            
+            Spacer()
+            
+            Button(action: {
+                viewModel.bookHotel(hotel)
+            }) {
+                Text("Hotel buchen")
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(8)
             }
-        }
-    }
-}
-struct HotelFeatureRow: View {
-    let icon: String
-    let title: String
-    let isActive: Bool
-
-    var body: some View {
-        HStack {
-            Image(systemName: icon)
-                .foregroundColor(isActive ? .green : .red)
-            Text(title)
-                .foregroundColor(.white)
-
+            .padding(.bottom, 32)
+            
             Spacer()
         }
+        .navigationBarBackButtonHidden(true) // Hide the original back button
+        .navigationBarItems(leading: backButton) // Add a custom back button
+        .navigationTitle("Hotel Details")
     }
-}
-
-struct HotelDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        let hotel = Hotel(name: "Example Hotel", location: "City", price: "$100", description: "This is an example hotel.", imageName: "hotel1", wifi: true)
-        let viewModel = HotelViewModel()
-        HotelDetailView(hotel: hotel, viewModel: viewModel)
+    
+    private var backButton: some View {
+        Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            Image(systemName: "chevron.left")
+                .foregroundColor(.blue)
+                .font(.title)
+        }
+        .padding(.all, 30)
+        .hidden()
     }
 }
