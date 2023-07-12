@@ -18,6 +18,7 @@
 		E758E0762A5D70CC00FA017F /* HolidayBookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0752A5D70CC00FA017F /* HolidayBookingViewModel.swift */; };
 		E758E0782A5D71BC00FA017F /* Holidays.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0772A5D71BC00FA017F /* Holidays.swift */; };
 		E758E07A2A5D751F00FA017F /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0792A5D751F00FA017F /* Events.swift */; };
+		E758E0B32A5ED8D000FA017F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0B22A5ED8D000FA017F /* Card.swift */; };
 		E78F2C812A559976003518A6 /* TravelJobFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2C802A559976003518A6 /* TravelJobFinderApp.swift */; };
 		E78F2C832A559976003518A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2C822A559976003518A6 /* ContentView.swift */; };
 		E78F2C852A559978003518A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78F2C842A559978003518A6 /* Assets.xcassets */; };
@@ -113,6 +114,7 @@
 		E758E0752A5D70CC00FA017F /* HolidayBookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayBookingViewModel.swift; sourceTree = "<group>"; };
 		E758E0772A5D71BC00FA017F /* Holidays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holidays.swift; sourceTree = "<group>"; };
 		E758E0792A5D751F00FA017F /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		E758E0B22A5ED8D000FA017F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E78F2C7D2A559976003518A6 /* TravelJobFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelJobFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78F2C802A559976003518A6 /* TravelJobFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelJobFinderApp.swift; sourceTree = "<group>"; };
 		E78F2C822A559976003518A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E758E0B12A5E288800FA017F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E78F2CE52A581E54003518A6 /* ChangePassword */,
+				E78F2CB42A559AB7003518A6 /* StartApp */,
+				E78F2CCE2A55F621003518A6 /* Authendification */,
+				E78F2CF82A582973003518A6 /* MemberArea */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E78F2C742A559976003518A6 = {
 			isa = PBXGroup;
 			children = (
@@ -232,17 +245,11 @@
 		E78F2C7F2A559976003518A6 /* TravelJobFinder */ = {
 			isa = PBXGroup;
 			children = (
-				E78F2D0E2A5A4D15003518A6 /* Events */,
-				E78F2CFC2A5A3161003518A6 /* Jobsearching */,
-				E78F2CF92A5830A7003518A6 /* Flüge */,
-				E78F2CF82A582973003518A6 /* MemberArea */,
+				E758E0B12A5E288800FA017F /* Views */,
 				E78F2CF32A582234003518A6 /* CustomCorner */,
-				E78F2CE52A581E54003518A6 /* ChangePassword */,
 				E78F2CDC2A581D90003518A6 /* Models */,
 				E78F2CD92A581D60003518A6 /* ViewModels */,
-				E78F2CCE2A55F621003518A6 /* Authendification */,
 				E78F2CCD2A55DEC7003518A6 /* ContentView */,
-				E78F2CB42A559AB7003518A6 /* StartApp */,
 				E78F2C802A559976003518A6 /* TravelJobFinderApp.swift */,
 				E78F2C842A559978003518A6 /* Assets.xcassets */,
 				E78F2C862A559978003518A6 /* Preview Content */,
@@ -375,6 +382,7 @@
 				E758E06E2A5C3EAA00FA017F /* Notification.swift */,
 				E758E0772A5D71BC00FA017F /* Holidays.swift */,
 				E758E0792A5D751F00FA017F /* Events.swift */,
+				E758E0B22A5ED8D000FA017F /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +409,7 @@
 				E78F2CE62A581E6D003518A6 /* ChangePasswordView.swift */,
 			);
 			name = ChangePassword;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E78F2CE82A581EAC003518A6 /* CreateProfil */ = {
@@ -470,6 +479,9 @@
 		E78F2CF82A582973003518A6 /* MemberArea */ = {
 			isa = PBXGroup;
 			children = (
+				E78F2D0E2A5A4D15003518A6 /* Events */,
+				E78F2CFC2A5A3161003518A6 /* Jobsearching */,
+				E78F2CF92A5830A7003518A6 /* Flüge */,
 				E78F2CD42A5814A9003518A6 /* Hotels */,
 				E78F2CF22A5821F2003518A6 /* TabButton */,
 				E78F2CE22A581E11003518A6 /* TermsOfService */,
@@ -706,6 +718,7 @@
 				E78F2D322A5B3D6B003518A6 /* FlightItemRow.swift in Sources */,
 				E78F2CD02A55F636003518A6 /* LoginView.swift in Sources */,
 				E78F2D342A5B4259003518A6 /* MemberDataViewModel.swift in Sources */,
+				E758E0B32A5ED8D000FA017F /* Card.swift in Sources */,
 				E78F2D242A5A4FE3003518A6 /* ConstantsForTripButton.swift in Sources */,
 				E78F2D2C2A5B3CF6003518A6 /* FlightListView.swift in Sources */,
 				E78F2CD82A5815CB003518A6 /* HotelDetailView.swift in Sources */,

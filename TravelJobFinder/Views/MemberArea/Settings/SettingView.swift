@@ -39,6 +39,14 @@ struct SettingView: View {
                         Label("Datenschutz", systemImage: "shield") // NavigationLink für die Datenschutzrichtlinie
                     }
                 }
+                Section(header: Text("Anzeige").font(.headline)) {
+                    NavigationLink(destination: TermsOfServiceView()) {
+                        Label("Theme wählen", systemImage: "sun.max.fill") // NavigationLink für die Nutzungsbedingungen
+                    }
+                    NavigationLink(destination: PrivacyPolicyView()) {
+                        Label("Community", systemImage: "globe.asia.australia.fill") // NavigationLink für die Datenschutzrichtlinie
+                    }
+                }
                 }
                 .navigationBarBackButtonHidden(true) // Verstecke den originalen Back-Button
                 .navigationBarItems(leading: backButton) // Füge einen benutzerdefinierten Back-Button hinzu

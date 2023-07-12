@@ -60,7 +60,7 @@ struct DetailActivityRow: View {
                 }
                 .padding(.horizontal)
             }
-            .background(.gray.opacity(0.4))
+            .background(.gray.opacity(0.9))
             .cornerRadius(10)
         }
     }

@@ -25,15 +25,15 @@ struct ActivityTripView: View {
         NavigationStack {
             ZStack {
         
-                Image("urlaubsbild")
-                    .resizable()
-                    .scaledToFill()
-                    .overlay(Rectangle())
-                    .edgesIgnoringSafeArea(.all)
-                    .foregroundColor(.black.opacity(0.75))
-                    .contrast(0.7)
-                    .offset(x: -0)
-                    .opacity(01.05)
+//                Image("Sommertime")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .overlay(Rectangle())
+//                    .edgesIgnoringSafeArea(.all)
+//                    .foregroundColor(.black.opacity(0.75))
+//                    .contrast(0.7)
+//                    .offset(x: -0)
+//                    .opacity(01.05)
                 // Ein Farbverlauf wird als Hintergrund festgelegt
                 LinearGradient(colors: [.white.opacity(0.77),.white.opacity(0.77)], startPoint: .topLeading, endPoint: .bottomLeading)
                     .edgesIgnoringSafeArea(.all)
@@ -43,6 +43,11 @@ struct ActivityTripView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.leading, 20)
+                    
+                    Text("Hier haben wir euch die beliebtesten und angesagtesten Freizeitaktivitäten herausgesucht und vielleicht ist ja genau das richtige für Sie dabei  ")
+                        .padding()
+                        .multilineTextAlignment(.leading)
+
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 20) {
                             ForEach(filteredActivities, id: \.id) { activity in
@@ -69,11 +74,13 @@ struct ActivityTripView: View {
                                             .padding(.leading, 20)
                                             .padding(.bottom, 5)
                                     }
-                                    .background(Color.black).opacity(0.8)
+                                    .background(Color.white).opacity(0.8)
+                                    .cornerRadius(20)
                                     .padding(.all)
-                                    .cornerRadius(10)
+                                    .padding()
                                     .shadow(radius: 5)
                                     .padding(.bottom, 20)
+
                                 }
                             }
                         }
