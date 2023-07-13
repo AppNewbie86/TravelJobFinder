@@ -15,6 +15,7 @@ struct Card : Identifiable {
 var sampleCards: [Card] = [
     Card(cardImage: "Card 1"),
     Card(cardImage: "Card 2"),
-    Card(cardImage: "Card 3")
-    
+    Card(cardImage: "Card 3"),
+    Card(cardImage: "Card 4")
+
 ]

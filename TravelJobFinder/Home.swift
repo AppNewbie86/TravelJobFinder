@@ -434,16 +434,22 @@ struct FlightSelectionView: View {
     // MARK: Aufstellen von Variablen
     var size: CGSize
     var safeArea: EdgeInsets
-    
+    // MARK: Gesture Properties
+    @State var offsetY : CGFloat = 0
+    @State var currentCardIndex : CGFloat = 0
     var body: some View {
         VStack(spacing: 0) {
             HeaderView()
+                .zIndex(1)
             PaymentCardView()
+                .zIndex(0)
+
             // Add more views and content here
         }
     }
     
     @ViewBuilder
+    // MARK: HeaderView
     func HeaderView() -> some View {
         VStack {
             Image("Logo 1")
@@ -493,12 +499,10 @@ struct FlightSelectionView: View {
                 )
         }
     }
-      
     @ViewBuilder
+    // MARK: PaymentCardView
     func PaymentCardView() -> some View {
-        
-            
-         
+     
         VStack {
             Text("Wähle deine Bezahlmethode")
                 .font(.caption)
@@ -512,18 +516,49 @@ struct FlightSelectionView: View {
                         CardView(index: index)
                     }
                     .padding(.horizontal, 30)
+                    .offset(y: offsetY)
+                    .offset(y: currentCardIndex * -200.00)
+
                 }
                 .coordinateSpace(name: "SCROLL")
-            }
-        }
-        
+            } // GeometryReader
+            .contentShape(Rectangle())
+            .gesture(
+                DragGesture()
+                    .onChanged({ value in
+                        // Degreasing Speed
+                        offsetY = value.translation.height * 0.3
+                    }).onEnded({value in
+                        let translation = value.translation.height
+                        withAnimation(.easeInOut) {
+                            // MARK: Increasing/Decreasing Index based on Condition
+                            // 100 -> Since Card Height = 200
+                            
+                            // If the user dragged the view downwards (positive translation) and the translation is greater than 100, and the currentCardIndex is greater than 0, decrease the currentCardIndex by 1.
+                            if translation > 0 && translation > 100 && currentCardIndex > 0 {
+                                currentCardIndex -= 1
+                            }
+                            
+                            // If the user dragged the view upwards (negative translation) and the absolute value of the translation is greater than 100, and the currentCardIndex is less than the number of sampleCards minus 1, increase the currentCardIndex by 1.
+                            if translation < 0  && -translation > 100 && currentCardIndex < CGFloat(sampleCards.count - 1) {
+                                currentCardIndex += 1
+                            }
+                            
+                            offsetY = .zero
+                        }
+                    })
+            )
+        } // End VStack
     }
+
     @ViewBuilder
+    // MARK: PaymentCardView
     func CardView(index : Int) -> some View {
         GeometryReader{ proxy in
             let size = proxy.size
             let minY = proxy.frame(in: .named("SCROLL")).minY
             let progress = minY / size.height
+            let constrainedprogress = progress > 1 ? 1 : progress < 0 ? 0 : progress
             
             Image(sampleCards[index].cardImage)
                 .resizable()
@@ -532,8 +567,9 @@ struct FlightSelectionView: View {
             // MARK: SHADOW
                 .shadow(color: .black.opacity(0.14), radius: 8, x: 6, y: 6)
             // MARK: Stacked Card Animation
-                .rotation3DEffect(.init(degrees: progress * 40.0), axis: (x:1,y: 0,z:0), anchor: .bottom)
+                .rotation3DEffect(.init(degrees: constrainedprogress * 40.0), axis: (x:1,y: 0,z:0), anchor: .bottom)
                 .padding(.top,progress * -160.0)
+                .offset(y: progress < 0 ? progress * 250 : 0)
         }
         .frame(height: 200)
         .zIndex(Double(sampleCards.count - index))
