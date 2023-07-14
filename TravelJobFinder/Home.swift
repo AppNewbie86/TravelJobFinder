@@ -427,29 +427,32 @@ enum TravelClass {
         }
     }
 }
-
 import SwiftUI
 
 struct FlightSelectionView: View {
     // MARK: Aufstellen von Variablen
     var size: CGSize
     var safeArea: EdgeInsets
+    @State private var navigateToFlightDetails: Bool = false
+
     // MARK: Gesture Properties
     @State var offsetY : CGFloat = 0
     @State var currentCardIndex : CGFloat = 0
+    @StateObject var flightDetailsViewModel = FlightDetailsViewModel()
+    
     var body: some View {
         VStack(spacing: 0) {
             HeaderView()
                 .zIndex(1)
-            PaymentCardView()
+            PaymentCardsView()
                 .zIndex(0)
+            PayButtonView()
 
             // Add more views and content here
         }
     }
     
     @ViewBuilder
-    // MARK: HeaderView
     func HeaderView() -> some View {
         VStack {
             Image("Logo 1")
@@ -460,7 +463,9 @@ struct FlightSelectionView: View {
             
             HStack {
                 // Add content to the HStack here
-                DetailSelectionFlightView(place: "London", code: "LON", timing: "23. Nov, 23.00 Uhr")
+                FlightDetailsView(
+                                  code: flightDetailsViewModel.departureFlight.code,
+                                  timing: flightDetailsViewModel.departureFlight.timing)
                 
                 VStack(spacing: 8) {
                     Image(systemName: "chevron.right")
@@ -470,7 +475,10 @@ struct FlightSelectionView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                 }
-                DetailSelectionFlightView(alignment: .trailing, place: "Las Vegas", code: "LAV", timing: "23. Nov, 13.15 Uhr")
+                FlightDetailsView(alignment: .trailing,
+                                 
+                                  code: flightDetailsViewModel.arrivalFlight.code,
+                                  timing: flightDetailsViewModel.arrivalFlight.timing)
             }
             .padding(.top, 20)
             
@@ -489,9 +497,9 @@ struct FlightSelectionView: View {
                 .fill(
                     LinearGradient(
                         gradient: Gradient(colors: [
-                            Color("LightYellow"),
+                            Color("IosGray"),
                             Color("Airred"),
-                            Color("Airred")
+                            Color("IosGray")
                         ]),
                         startPoint: .top,
                         endPoint: .bottom
@@ -499,10 +507,9 @@ struct FlightSelectionView: View {
                 )
         }
     }
+    
     @ViewBuilder
-    // MARK: PaymentCardView
-    func PaymentCardView() -> some View {
-     
+    func PaymentCardsView() -> some View {
         VStack {
             Text("Wähle deine Bezahlmethode")
                 .font(.caption)
@@ -512,49 +519,75 @@ struct FlightSelectionView: View {
             
             GeometryReader {_ in
                 VStack(spacing: 0) {
-                    ForEach(sampleCards.indices,id: \.self) { index in
+                    ForEach(sampleCards.indices, id: \.self) { index in
                         CardView(index: index)
                     }
                     .padding(.horizontal, 30)
                     .offset(y: offsetY)
                     .offset(y: currentCardIndex * -200.00)
-
+                    
+                    // MARK: Gradient View
+                    Rectangle()
+                        .fill(.linearGradient(colors: [
+                            .clear,
+                            .clear,
+                            .clear,
+                            .clear,
+                            .white.opacity(0.3),
+                            .white.opacity(0.7),
+                            .white
+                        ], startPoint: .top, endPoint: .bottom))
+                        .allowsHitTesting(false)
+                    
+                    // MARK: PURCHASE BUTTON
+                    NavigationLink(
+                        destination: FlightDetailsView(
+                            code: flightDetailsViewModel.departureFlight.code,
+                            timing: flightDetailsViewModel.departureFlight.timing
+                        )
+                    ) {
+                        Text("Confirm € 2500.00")
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.red)
+                            .padding(.horizontal, 30)
+                            .padding(.vertical, 10)
+                            .background {
+                                Capsule()
+                                    .fill(Color("BlueTop").gradient)
+                            }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                    .padding(.bottom, safeArea.bottom == 0 ? 15 : safeArea.bottom)
                 }
                 .coordinateSpace(name: "SCROLL")
-            } // GeometryReader
+            }
             .contentShape(Rectangle())
             .gesture(
                 DragGesture()
                     .onChanged({ value in
-                        // Degreasing Speed
                         offsetY = value.translation.height * 0.3
-                    }).onEnded({value in
+                    })
+                    .onEnded({ value in
                         let translation = value.translation.height
                         withAnimation(.easeInOut) {
-                            // MARK: Increasing/Decreasing Index based on Condition
-                            // 100 -> Since Card Height = 200
-                            
-                            // If the user dragged the view downwards (positive translation) and the translation is greater than 100, and the currentCardIndex is greater than 0, decrease the currentCardIndex by 1.
                             if translation > 0 && translation > 100 && currentCardIndex > 0 {
                                 currentCardIndex -= 1
                             }
-                            
-                            // If the user dragged the view upwards (negative translation) and the absolute value of the translation is greater than 100, and the currentCardIndex is less than the number of sampleCards minus 1, increase the currentCardIndex by 1.
                             if translation < 0  && -translation > 100 && currentCardIndex < CGFloat(sampleCards.count - 1) {
                                 currentCardIndex += 1
                             }
-                            
                             offsetY = .zero
                         }
                     })
             )
-        } // End VStack
+        }
     }
 
+    
     @ViewBuilder
-    // MARK: PaymentCardView
     func CardView(index : Int) -> some View {
-        GeometryReader{ proxy in
+        GeometryReader { proxy in
             let size = proxy.size
             let minY = proxy.frame(in: .named("SCROLL")).minY
             let progress = minY / size.height
@@ -563,54 +596,80 @@ struct FlightSelectionView: View {
             Image(sampleCards[index].cardImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: size.width,height: size.height)
-            // MARK: SHADOW
+                .frame(width: size.width, height: size.height)
                 .shadow(color: .black.opacity(0.14), radius: 8, x: 6, y: 6)
-            // MARK: Stacked Card Animation
-                .rotation3DEffect(.init(degrees: constrainedprogress * 40.0), axis: (x:1,y: 0,z:0), anchor: .bottom)
-                .padding(.top,progress * -160.0)
+                .rotation3DEffect(.init(degrees: constrainedprogress * 40.0), axis: (x:1, y: 0, z:0), anchor: .bottom)
+                .padding(.top, progress * -160.0)
                 .offset(y: progress < 0 ? progress * 250 : 0)
         }
         .frame(height: 200)
         .zIndex(Double(sampleCards.count - index))
-    }
-    @ViewBuilder
-    func DetailSelectionFlightView(alignment: HorizontalAlignment = .leading, place: String, code: String, timing: String) -> some View {
-        
-        // Implement the DetailSelectionFlightView function here
-        VStack(alignment: alignment, spacing: 6) {
-            Text(place)
-                .font(.caption)
-                .foregroundColor(.white.opacity(0.8))
-            
-            Text(code)
-                .font(.title)
-                .foregroundColor(.white)
-            
-            Text(timing)
-                .font(.caption)
-                .foregroundColor(.white.opacity(0.8))
+        .onTapGesture {
+            print(index)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     struct FlightSelectionView_Previews: PreviewProvider {
         static var previews: some View {
             FlightSelectionView(
-                size: CGSize(width: 375, height: 667), // Provide desired size
-                safeArea: EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0) // Provide desired safe area
+                size: CGSize(width: 375, height: 667),
+                safeArea: EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
             )
         }
     }
 }
+
+struct FlightDetailsView : View {
+    @State private var departurePlaceIndex = 0
+    @State private var arrivalPlaceIndex = 0
+    
+    let places = ["London", "New York", "Paris", "Tokyo"]
+    
+    var alignment: HorizontalAlignment = .leading
+    var code: String
+    var timing: String
+    
+    var body: some View {
+        VStack(alignment: alignment, spacing: 6) {
+            Picker("Departure Place", selection: $departurePlaceIndex) {
+                ForEach(0..<places.count) { index in
+                    Text(places[index]).tag(index)
+                }
+            }
+            .pickerStyle(.menu)
+            .foregroundColor(.black.opacity(0.8))
+            .frame(maxWidth: .infinity)
+            
+            Text(code)
+                .font(.title)
+                .foregroundColor(.black)
+            
+            Text(timing)
+                .font(.caption)
+        }
+    }
+}
+
+
+@MainActor
+class FlightDetailsViewModel: ObservableObject {
+    @Published var departureFlight = FlightDetails(place: "London", code: "LON", timing: "23. Nov, 23.00 Uhr")
+    @Published var arrivalFlight = FlightDetails(place: "Las Vegas", code: "LAV", timing: "23. Nov, 13.15 Uhr")
+    
+    func confirmSelection() {
+        print("Selection confirmed!")
+        // Perform any action upon confirmation
+    }
+}
+
+
+
+
+let sampleCards = [
+    Card(id: 0, cardImage: "Card 1"),
+    Card(id: 1, cardImage: "Card 2"),
+    Card(id: 2, cardImage: "Card 4"),
+    Card(id: 2, cardImage: "Card 5"),
+    Card(id: 2, cardImage: "Card 6")
+
+]

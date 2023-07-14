@@ -34,7 +34,6 @@ struct TravelJobFinderApp: App {
     @EnvironmentObject var authService : AuthService
     @StateObject private var tripTide = TripTypeViewModel()
     @StateObject private var hotelTide = HotelViewModel()
-    @StateObject private var flightTide = FlightTypeViewModel()
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
@@ -44,7 +43,6 @@ struct TravelJobFinderApp: App {
                 .environmentObject(AuthService())
                 .environmentObject(tripTide)
                 .environmentObject(hotelTide)
-                .environmentObject(flightTide)
 
         }
     }

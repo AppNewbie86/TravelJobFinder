@@ -8,7 +8,7 @@ import SwiftUI
 
 struct PayButtonView: View {
     @State private var isAnimating: Bool = false
-
+    @State private var showFlightDetailSelectionView = false
     var body: some View {
         VStack {
             // MARK: - HEADER
@@ -18,6 +18,7 @@ struct PayButtonView: View {
                 
                 Button(action: {
                     // Aktion beim Klicken auf den Button
+                    showFlightDetailSelectionView = true
                 }) {
                     Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                         .imageScale(.large)
@@ -31,6 +32,14 @@ struct PayButtonView: View {
                 .controlSize(.large)
                 .blur(radius: 0.5)
                 .shadow(color: .gray, radius: 20, x: 0, y: 10)
+                .fullScreenCover(isPresented: $showFlightDetailSelectionView, content: {
+                 //  FlightDetailsView(place: "London", code: "LON", timing: "23. Nov, 23.00 Uhr")
+                 //  FlightDetailsView(place: "BARCELONA", code: "BAR", timing: "23. Nov, 00.00 Uhr")
+                    FlightDetailSelectionView(
+                        size: CGSize(width: 375, height: 667),
+                        safeArea: EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
+                    )
+                })
             } //: ZSTACK
             .onAppear(perform: {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
