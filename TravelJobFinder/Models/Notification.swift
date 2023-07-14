@@ -5,6 +5,9 @@ import MapKit
 // Importieren der benötigten Frameworks
 
 //MARK: MODEL
+// Die Notification-Struktur definiert das Modell für eine Benachrichtigung mit den entsprechenden Parametern.
+
+import SwiftUI
 
 struct Notification : Identifiable {
     
@@ -13,9 +16,17 @@ struct Notification : Identifiable {
     let image : String
     let description : String
     
-    
-   
+    // Die Notification-Struktur repräsentiert eine Benachrichtigung und speichert Informationen über die Benachrichtigung.
+
+    // Die Notification-Struktur hat folgende Eigenschaften:
+    // - id: Die eindeutige ID der Benachrichtigung
+    // - name: Der Name der Benachrichtigung
+    // - image: Der Name oder Pfad zum Bild der Benachrichtigung
+    // - description: Eine Beschreibung der Benachrichtigung
+
+    // Diese Struktur kann verwendet werden, um Benachrichtigungsobjekte in deiner Anwendung darzustellen und zu verarbeiten.
 }
+
 
 // Erstellen von Instanzen der Aktivitäten-Struct und Speichern in einem Array
 var notifications = [Notification(name: "SURFEN", image: "activityimage1",description: "You won't forget that, here are the best and the biggest\nwaves that any adventure surfer will dream to jump in\n.Make your kid interior have fun\nby booking this amazing experince right now !\n"),

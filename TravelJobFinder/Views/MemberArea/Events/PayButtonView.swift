@@ -33,12 +33,9 @@ struct PayButtonView: View {
                 .blur(radius: 0.5)
                 .shadow(color: .gray, radius: 20, x: 0, y: 10)
                 .fullScreenCover(isPresented: $showFlightDetailSelectionView, content: {
-                 //  FlightDetailsView(place: "London", code: "LON", timing: "23. Nov, 23.00 Uhr")
-                 //  FlightDetailsView(place: "BARCELONA", code: "BAR", timing: "23. Nov, 00.00 Uhr")
-                    FlightDetailSelectionView(
-                        size: CGSize(width: 375, height: 667),
-                        safeArea: EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
-                    )
+                    FlightDetailsView(code: "LON", timing: "23. Nov, 23.00 Uhr")
+                                        FlightDetailsView(code: "BAR", timing: "23. Nov, 00.00 Uhr")
+
                 })
             } //: ZSTACK
             .onAppear(perform: {

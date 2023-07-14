@@ -24,7 +24,28 @@ struct Holiday : Identifiable {
    
 }
 
+// MARK: - Definiert das Modell für einen Urlaub mit Parametern
+   // Die Holiday-Struktur repräsentiert einen Urlaub und speichert Informationen über den Urlaub.
 
+   // Die Holiday-Struktur hat folgende Eigenschaften:
+   // - id: Die eindeutige ID des Urlaubs
+   // - name: Der Name des Urlaubs
+   // - image: Der Name oder Pfad zum Bild des Urlaubs
+   // - description: Eine Beschreibung des Urlaubs
+   // - price: Der Preis des Urlaubs
+   // - duration: Die Dauer des Urlaubs
+   // - departureTime: Die Abfahrtszeit des Urlaubs
+   // - arrivalTime: Die Ankunftszeit des Urlaubs
+   // - origin: Der Ursprung des Urlaubs
+   // - destination: Das Ziel des Urlaubs
+   // - stops: Die Anzahl der Zwischenstopps des Urlaubs
+   // - airlineCode: Der Flugliniencode des Urlaubs
+   // - baggageAllowance: Das Gepäckstücklimit des Urlaubs
+   // - wifiAvailability: Die Verfügbarkeit von WLAN im Urlaub
+   // - inFlightEntertainment: Die Verfügbarkeit von In-Flight-Unterhaltung im Urlaub
+   // - mealIncluded: Gibt an, ob Mahlzeiten im Urlaub enthalten sind
+
+   // Diese Struktur kann verwendet werden, um Urlaubsobjekte in deiner Anwendung darzustellen und zu verarbeiten.
 
 // Erstellen weiterer Instanzen der Holidays-Struct und Speichern in Variablen
 private var holiday1 = Holiday(name: "Ethiopian Airlines", image: "Ethiopian Airlines",description: "International Airline We fly with us 365 Days of the Year", price: 1140, duration: "6h 30m", departureTime: "12:30 PM", arrivalTime: "6:00 PM", origin: "ADD", destination: "FRA", stops: 0, airlineCode: "ET", baggageAllowance: "2 bags, 23kg each", wifiAvailability: true, inFlightEntertainment: true, mealIncluded: true)
@@ -44,6 +65,7 @@ private var holiday7 = Holiday(name: "WANDA AIRLINES", image: "WANDA AIRLINES",d
 private var holiday8 = Holiday(name: "WANDA AIRLINES", image: "WANDA AIRLINES",description: "A Airline who since at 1978", price: 444, duration: "8h 45m", departureTime: "2:15 AM", arrivalTime: "11:30", origin: "FRA", destination: "LAS", stops: 1, airlineCode: "DE", baggageAllowance: "1 bag, 20kg", wifiAvailability: false, inFlightEntertainment: true, mealIncluded: true)
 
 
+// Die HolidayModel-Struktur stellt eine Datenquelle für Urlaubsobjekte bereit. Sie enthält eine Liste von Holiday-Objekten und ein Suchtextfeld, um nach bestimmten Urlauben zu suchen.
 
 
 struct HolidayModel {
@@ -51,4 +73,5 @@ struct HolidayModel {
     var searchtext : String = ""
     
 }
+
 

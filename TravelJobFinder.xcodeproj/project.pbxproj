@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E758E0612A5B7BE100FA017F /* BookingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0602A5B7BE100FA017F /* BookingCardView.swift */; };
 		E758E0632A5B7C3700FA017F /* BookingHotelsItemRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0622A5B7C3700FA017F /* BookingHotelsItemRows.swift */; };
 		E758E0652A5C044700FA017F /* BookingCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0642A5C044700FA017F /* BookingCategory.swift */; };
 		E758E0672A5C053100FA017F /* HotelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0662A5C053100FA017F /* HotelButton.swift */; };
@@ -21,6 +20,24 @@
 		E758E0B32A5ED8D000FA017F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0B22A5ED8D000FA017F /* Card.swift */; };
 		E758E0B52A60D44B00FA017F /* FlightDetailSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0B42A60D44B00FA017F /* FlightDetailSelectionView.swift */; };
 		E758E0B72A60D4A700FA017F /* FlightDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0B62A60D4A700FA017F /* FlightDetails.swift */; };
+		E758E0BA2A61E73100FA017F /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0B92A61E73100FA017F /* BookingView.swift */; };
+		E758E0BC2A61E7CD00FA017F /* HolidayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0BB2A61E7CD00FA017F /* HolidayItem.swift */; };
+		E758E0BE2A61E7F900FA017F /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0BD2A61E7F900FA017F /* NewsItem.swift */; };
+		E758E0C12A61E83100FA017F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0C02A61E83100FA017F /* NotificationView.swift */; };
+		E758E0C42A61E8C900FA017F /* DeepLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0C32A61E8C900FA017F /* DeepLinkView.swift */; };
+		E758E0C62A61E9CA00FA017F /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0C52A61E9CA00FA017F /* CardViewModel.swift */; };
+		E758E0C92A61E9FD00FA017F /* SearchBarHomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0C82A61E9FD00FA017F /* SearchBarHomeRow.swift */; };
+		E758E0CC2A61EA8700FA017F /* TicketShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0CB2A61EA8700FA017F /* TicketShape.swift */; };
+		E758E0CE2A61EADC00FA017F /* TicketDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0CD2A61EADC00FA017F /* TicketDetailsView.swift */; };
+		E758E0D12A61EB5C00FA017F /* TicketShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0D02A61EB5C00FA017F /* TicketShapeType.swift */; };
+		E758E0D32A61EBA100FA017F /* TravelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0D22A61EBA100FA017F /* TravelClass.swift */; };
+		E758E0D52A61EBF600FA017F /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0D42A61EBF600FA017F /* FlightDetailsView.swift */; };
+		E758E0D72A61EC4200FA017F /* FlightDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0D62A61EC4200FA017F /* FlightDetailsViewModel.swift */; };
+		E758E0D92A61ECA500FA017F /* HelpLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0D82A61ECA500FA017F /* HelpLinkView.swift */; };
+		E758E0DB2A61ECEC00FA017F /* FlightSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0DA2A61ECEC00FA017F /* FlightSelectionView.swift */; };
+		E758E0DE2A61F54800FA017F /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0DD2A61F54800FA017F /* Job.swift */; };
+		E758E0E02A61F88800FA017F /* BookingCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0DF2A61F88800FA017F /* BookingCategories.swift */; };
+		E758E0E22A61FB4A00FA017F /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758E0E12A61FB4A00FA017F /* JobViewModel.swift */; };
 		E78F2C812A559976003518A6 /* TravelJobFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2C802A559976003518A6 /* TravelJobFinderApp.swift */; };
 		E78F2C832A559976003518A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2C822A559976003518A6 /* ContentView.swift */; };
 		E78F2C852A559978003518A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78F2C842A559978003518A6 /* Assets.xcassets */; };
@@ -103,7 +120,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E758E0602A5B7BE100FA017F /* BookingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCardView.swift; sourceTree = "<group>"; };
 		E758E0622A5B7C3700FA017F /* BookingHotelsItemRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingHotelsItemRows.swift; sourceTree = "<group>"; };
 		E758E0642A5C044700FA017F /* BookingCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCategory.swift; sourceTree = "<group>"; };
 		E758E0662A5C053100FA017F /* HotelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelButton.swift; sourceTree = "<group>"; };
@@ -117,6 +133,24 @@
 		E758E0B22A5ED8D000FA017F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E758E0B42A60D44B00FA017F /* FlightDetailSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailSelectionView.swift; sourceTree = "<group>"; };
 		E758E0B62A60D4A700FA017F /* FlightDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetails.swift; sourceTree = "<group>"; };
+		E758E0B92A61E73100FA017F /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
+		E758E0BB2A61E7CD00FA017F /* HolidayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayItem.swift; sourceTree = "<group>"; };
+		E758E0BD2A61E7F900FA017F /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		E758E0C02A61E83100FA017F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		E758E0C32A61E8C900FA017F /* DeepLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkView.swift; sourceTree = "<group>"; };
+		E758E0C52A61E9CA00FA017F /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		E758E0C82A61E9FD00FA017F /* SearchBarHomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarHomeRow.swift; sourceTree = "<group>"; };
+		E758E0CB2A61EA8700FA017F /* TicketShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketShape.swift; sourceTree = "<group>"; };
+		E758E0CD2A61EADC00FA017F /* TicketDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailsView.swift; sourceTree = "<group>"; };
+		E758E0D02A61EB5C00FA017F /* TicketShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketShapeType.swift; sourceTree = "<group>"; };
+		E758E0D22A61EBA100FA017F /* TravelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelClass.swift; sourceTree = "<group>"; };
+		E758E0D42A61EBF600FA017F /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
+		E758E0D62A61EC4200FA017F /* FlightDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewModel.swift; sourceTree = "<group>"; };
+		E758E0D82A61ECA500FA017F /* HelpLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpLinkView.swift; sourceTree = "<group>"; };
+		E758E0DA2A61ECEC00FA017F /* FlightSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSelectionView.swift; sourceTree = "<group>"; };
+		E758E0DD2A61F54800FA017F /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		E758E0DF2A61F88800FA017F /* BookingCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCategories.swift; sourceTree = "<group>"; };
+		E758E0E12A61FB4A00FA017F /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		E78F2C7D2A559976003518A6 /* TravelJobFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelJobFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78F2C802A559976003518A6 /* TravelJobFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelJobFinderApp.swift; sourceTree = "<group>"; };
 		E78F2C822A559976003518A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -212,12 +246,73 @@
 		E758E0B12A5E288800FA017F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E78F2CCD2A55DEC7003518A6 /* ContentView */,
 				E78F2CE52A581E54003518A6 /* ChangePassword */,
 				E78F2CB42A559AB7003518A6 /* StartApp */,
 				E78F2CCE2A55F621003518A6 /* Authendification */,
 				E78F2CF82A582973003518A6 /* MemberArea */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E758E0B82A61E72300FA017F /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				E758E0B92A61E73100FA017F /* BookingView.swift */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		E758E0BF2A61E82400FA017F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				E758E0C02A61E83100FA017F /* NotificationView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		E758E0C22A61E8B200FA017F /* WEBSITE LINKS */ = {
+			isa = PBXGroup;
+			children = (
+				E758E0C32A61E8C900FA017F /* DeepLinkView.swift */,
+				E758E0D82A61ECA500FA017F /* HelpLinkView.swift */,
+			);
+			path = "WEBSITE LINKS";
+			sourceTree = "<group>";
+		};
+		E758E0C72A61E9EE00FA017F /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				E758E0C82A61E9FD00FA017F /* SearchBarHomeRow.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		E758E0CA2A61EA6C00FA017F /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				E758E0CF2A61EB4B00FA017F /* Enums */,
+				E758E0CB2A61EA8700FA017F /* TicketShape.swift */,
+				E758E0CD2A61EADC00FA017F /* TicketDetailsView.swift */,
+			);
+			path = Tickets;
+			sourceTree = "<group>";
+		};
+		E758E0CF2A61EB4B00FA017F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E758E0D02A61EB5C00FA017F /* TicketShapeType.swift */,
+				E758E0D22A61EBA100FA017F /* TravelClass.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E758E0DC2A61EE5400FA017F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E78F2CAA2A5599A2003518A6 /* Home.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		E78F2C742A559976003518A6 = {
@@ -249,12 +344,9 @@
 				E78F2CF32A582234003518A6 /* CustomCorner */,
 				E78F2CDC2A581D90003518A6 /* Models */,
 				E78F2CD92A581D60003518A6 /* ViewModels */,
-				E78F2CCD2A55DEC7003518A6 /* ContentView */,
 				E78F2C802A559976003518A6 /* TravelJobFinderApp.swift */,
 				E78F2C842A559978003518A6 /* Assets.xcassets */,
 				E78F2C862A559978003518A6 /* Preview Content */,
-				E78F2CAA2A5599A2003518A6 /* Home.swift */,
-				E758E0602A5B7BE100FA017F /* BookingCardView.swift */,
 			);
 			path = TravelJobFinder;
 			sourceTree = "<group>";
@@ -366,6 +458,9 @@
 				E78F2D332A5B4259003518A6 /* MemberDataViewModel.swift */,
 				E758E06C2A5C3DF200FA017F /* NotificationViewModel.swift */,
 				E758E0752A5D70CC00FA017F /* HolidayBookingViewModel.swift */,
+				E758E0C52A61E9CA00FA017F /* CardViewModel.swift */,
+				E758E0D62A61EC4200FA017F /* FlightDetailsViewModel.swift */,
+				E758E0E12A61FB4A00FA017F /* JobViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -384,6 +479,10 @@
 				E758E0792A5D751F00FA017F /* Events.swift */,
 				E758E0B22A5ED8D000FA017F /* Card.swift */,
 				E758E0B62A60D4A700FA017F /* FlightDetails.swift */,
+				E758E0BB2A61E7CD00FA017F /* HolidayItem.swift */,
+				E758E0BD2A61E7F900FA017F /* NewsItem.swift */,
+				E758E0DD2A61F54800FA017F /* Job.swift */,
+				E758E0DF2A61F88800FA017F /* BookingCategories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -480,6 +579,12 @@
 		E78F2CF82A582973003518A6 /* MemberArea */ = {
 			isa = PBXGroup;
 			children = (
+				E758E0DC2A61EE5400FA017F /* Home */,
+				E758E0CA2A61EA6C00FA017F /* Tickets */,
+				E758E0C72A61E9EE00FA017F /* SearchBar */,
+				E758E0C22A61E8B200FA017F /* WEBSITE LINKS */,
+				E758E0BF2A61E82400FA017F /* Notifications */,
+				E758E0B82A61E72300FA017F /* Booking */,
 				E78F2D0E2A5A4D15003518A6 /* Events */,
 				E78F2CFC2A5A3161003518A6 /* Jobsearching */,
 				E78F2CF92A5830A7003518A6 /* Flüge */,
@@ -505,6 +610,8 @@
 				E78F2D2D2A5B3D23003518A6 /* CountdownCircle.swift */,
 				E78F2D2F2A5B3D55003518A6 /* FlightButton.swift */,
 				E758E0B42A60D44B00FA017F /* FlightDetailSelectionView.swift */,
+				E758E0D42A61EBF600FA017F /* FlightDetailsView.swift */,
+				E758E0DA2A61ECEC00FA017F /* FlightSelectionView.swift */,
 			);
 			name = "Flüge";
 			path = "Flüge";
@@ -685,10 +792,11 @@
 				E78F2D002A5A31EE003518A6 /* JobView.swift in Sources */,
 				E758E0B72A60D4A700FA017F /* FlightDetails.swift in Sources */,
 				E78F2CE12A581DDD003518A6 /* PrivacyPolicyView.swift in Sources */,
+				E758E0E22A61FB4A00FA017F /* JobViewModel.swift in Sources */,
+				E758E0C42A61E8C900FA017F /* DeepLinkView.swift in Sources */,
 				E78F2CD62A5814C2003518A6 /* HotelListView.swift in Sources */,
 				E78F2D2E2A5B3D23003518A6 /* CountdownCircle.swift in Sources */,
 				E78F2C832A559976003518A6 /* ContentView.swift in Sources */,
-				E758E0612A5B7BE100FA017F /* BookingCardView.swift in Sources */,
 				E78F2CDE2A581D9C003518A6 /* Hotel.swift in Sources */,
 				E78F2D372A5B42B1003518A6 /* MemberContainer.xcdatamodeld in Sources */,
 				E78F2D082A5A32E8003518A6 /* DataModel.swift in Sources */,
@@ -697,32 +805,47 @@
 				E78F2CB62A559AC9003518A6 /* Splash.swift in Sources */,
 				E78F2D202A5A4EB7003518A6 /* Activities.swift in Sources */,
 				E78F2D102A5A4D49003518A6 /* SearchBar3.swift in Sources */,
+				E758E0BA2A61E73100FA017F /* BookingView.swift in Sources */,
 				E78F2CB92A55A428003518A6 /* AuthService.swift in Sources */,
+				E758E0D72A61EC4200FA017F /* FlightDetailsViewModel.swift in Sources */,
 				E78F2D182A5A4DF8003518A6 /* DetailActivityView.swift in Sources */,
+				E758E0BE2A61E7F900FA017F /* NewsItem.swift in Sources */,
 				E78F2D1A2A5A4E19003518A6 /* ActivityButton.swift in Sources */,
+				E758E0D92A61ECA500FA017F /* HelpLinkView.swift in Sources */,
+				E758E0D32A61EBA100FA017F /* TravelClass.swift in Sources */,
 				E78F2CED2A582048003518A6 /* NewsPage.swift in Sources */,
+				E758E0CE2A61EADC00FA017F /* TicketDetailsView.swift in Sources */,
 				E758E0672A5C053100FA017F /* HotelButton.swift in Sources */,
 				E758E0762A5D70CC00FA017F /* HolidayBookingViewModel.swift in Sources */,
 				E78F2CC92A55A5AD003518A6 /* OnboardingRules.swift in Sources */,
+				E758E0BC2A61E7CD00FA017F /* HolidayItem.swift in Sources */,
 				E78F2CAF2A5599F3003518A6 /* SideMenu.swift in Sources */,
 				E78F2D142A5A4DB0003518A6 /* BookingCardButton.swift in Sources */,
 				E78F2CB12A559A12003518A6 /* TabButton.swift in Sources */,
 				E78F2D062A5A32C7003518A6 /* JobResponse.swift in Sources */,
 				E78F2CDB2A581D78003518A6 /* HotelViewModel.swift in Sources */,
+				E758E0D52A61EBF600FA017F /* FlightDetailsView.swift in Sources */,
+				E758E0DB2A61ECEC00FA017F /* FlightSelectionView.swift in Sources */,
+				E758E0E02A61F88800FA017F /* BookingCategories.swift in Sources */,
+				E758E0D12A61EB5C00FA017F /* TicketShapeType.swift in Sources */,
 				E78F2CFE2A5A3176003518A6 /* EmptyStateView.swift in Sources */,
 				E78F2D302A5B3D55003518A6 /* FlightButton.swift in Sources */,
 				E78F2CB32A559A54003518A6 /* CustomCorner.swift in Sources */,
+				E758E0C92A61E9FD00FA017F /* SearchBarHomeRow.swift in Sources */,
 				E78F2D022A5A3253003518A6 /* JobDetailView.swift in Sources */,
+				E758E0DE2A61F54800FA017F /* Job.swift in Sources */,
 				E78F2D1E2A5A4E85003518A6 /* TripTypeViewModel.swift in Sources */,
 				E78F2D0D2A5A338B003518A6 /* JobListViewModel.swift in Sources */,
 				E758E0692A5C057200FA017F /* Cart.swift in Sources */,
 				E758E0B52A60D44B00FA017F /* FlightDetailSelectionView.swift in Sources */,
+				E758E0CC2A61EA8700FA017F /* TicketShape.swift in Sources */,
 				E78F2CD02A55F636003518A6 /* LoginView.swift in Sources */,
 				E78F2D342A5B4259003518A6 /* MemberDataViewModel.swift in Sources */,
 				E758E0B32A5ED8D000FA017F /* Card.swift in Sources */,
 				E78F2D242A5A4FE3003518A6 /* ConstantsForTripButton.swift in Sources */,
 				E78F2D2C2A5B3CF6003518A6 /* FlightListView.swift in Sources */,
 				E78F2CD82A5815CB003518A6 /* HotelDetailView.swift in Sources */,
+				E758E0C12A61E83100FA017F /* NotificationView.swift in Sources */,
 				E78F2D162A5A4DD1003518A6 /* ActivityTripView.swift in Sources */,
 				E78F2CEA2A581FD5003518A6 /* CreateProfileView.swift in Sources */,
 				E78F2CD32A55F971003518A6 /* OnboardingView.swift in Sources */,
@@ -735,6 +858,7 @@
 				E758E06B2A5C05B100FA017F /* BookingHotelCartButton.swift in Sources */,
 				E758E0652A5C044700FA017F /* BookingCategory.swift in Sources */,
 				E78F2D262A5A8D53003518A6 /* Flights.swift in Sources */,
+				E758E0C62A61E9CA00FA017F /* CardViewModel.swift in Sources */,
 				E758E06F2A5C3EAA00FA017F /* Notification.swift in Sources */,
 				E78F2D122A5A4D8C003518A6 /* PayButtonView.swift in Sources */,
 				E78F2CE42A581E21003518A6 /* TermsOfServiceView.swift in Sources */,

@@ -3,7 +3,13 @@
 import SwiftUI
 
 struct FlightDetailSelectionView: View {
-    @StateObject private var flightSelectionViewModel = FlightSelectionViewModel()
+   
+    @ObservedObject var flightSelectionViewModel: FlightDetailsViewModel
+    
+    @State private var departurePlaceIndex : String = ""
+    @State private var arrivalPlaceIndex : String = ""
+
+    
     var size: CGSize
     var safeArea: EdgeInsets
     
@@ -37,9 +43,10 @@ struct FlightDetailSelectionView: View {
                 }
                 
                 HStack {
-                    FlightDetailsView(
-                                      code: flightSelectionViewModel.departureCode,
-                                      timing: flightSelectionViewModel.departureTiming)
+                    Text(departurePlaceIndex)
+//                    FlightDetailsView(
+//                                      code: flightSelectionViewModel.departureCode,
+//                                      timing: flightSelectionViewModel.departureTiming)
                     .foregroundColor(.black)
                     
                     VStack(spacing: 8) {
@@ -50,11 +57,11 @@ struct FlightDetailSelectionView: View {
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity)
                     }
-                    
-                    FlightDetailsView(alignment: .trailing,
-                                      
-                                      code: flightSelectionViewModel.arrivalCode,
-                                      timing: flightSelectionViewModel.arrivalTiming)
+                    Text(arrivalPlaceIndex)
+//                    FlightDetailsView(alignment: .trailing,
+//
+//                                      code: flightSelectionViewModel.arrivalCode,
+//                                      timing: flightSelectionViewModel.arrivalTiming)
                 }
                 .padding(15)
                 .padding(.bottom, 70)
@@ -81,7 +88,7 @@ struct FlightDetailSelectionView: View {
 struct FlightDetailSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         FlightDetailSelectionView(
-            size: CGSize(width: 375, height: 667),
+            flightSelectionViewModel: FlightDetailsViewModel(), size: CGSize(width: 375, height: 667),
             safeArea: EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
         )
     }
